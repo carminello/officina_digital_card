@@ -7,7 +7,7 @@
   <meta name="description" content="Scheda digitale ufficiale di Notaro Officine Technology con contatti rapidi.">
   <title>Notaro Officine Technology</title>
   <style>
-    :root { color-scheme: dark; --red: #c9473d; --white: #f4f4f2; --muted: #b5b8bb; }
+    :root { color-scheme: dark; --red: #c9473d; --white: #f4f4f2; --muted: #b5b8bb; --lab: #e64aa6; }
     * { box-sizing: border-box; }
     html, body { margin: 0; min-height: 100%; }
     body {
@@ -17,10 +17,9 @@
       background-image: linear-gradient(180deg, rgba(9,11,13,.62), rgba(9,11,13,.84) 52%, rgba(9,11,13,.94)),
         linear-gradient(90deg, rgba(8,10,12,.4), rgba(8,10,12,.16)),
         url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1800&q=85");
-      background-size: cover; background-position: center;
-      background-attachment: fixed;
+      background-size: cover; background-position: center; background-attachment: fixed;
     }
-    .card { width: min(100%, 440px); text-align: center; padding: 34px 24px 28px; border: 1px solid rgba(255,255,255,.12); border-radius: 26px; background: rgba(15,17,19,.58); backdrop-filter: blur(14px); box-shadow: 0 24px 80px rgba(0,0,0,.36); }
+    .card { width: min(100%, 440px); text-align: center; padding: 34px 24px 24px; border: 1px solid rgba(255,255,255,.12); border-radius: 26px; background: rgba(15,17,19,.58); backdrop-filter: blur(14px); box-shadow: 0 24px 80px rgba(0,0,0,.36); }
     .mark { width: 54px; height: 4px; margin: 0 auto 22px; border-radius: 10px; background: var(--red); box-shadow: 0 0 20px rgba(201,71,61,.4); }
     .eyebrow { margin: 0 0 10px; font-size: 10px; letter-spacing: .28em; font-weight: 700; color: #d4d5d6; text-transform: uppercase; }
     h1 { margin: 0; font-size: clamp(25px, 7vw, 34px); line-height: 1.08; letter-spacing: .045em; font-weight: 800; }
@@ -32,7 +31,13 @@
     .button.primary { border-color: rgba(201,71,61,.75); background: linear-gradient(135deg, rgba(135,42,37,.94), rgba(61,28,28,.96)); }
     .icon { width: 21px; height: 21px; flex: 0 0 auto; }
     .footer { margin: 25px 0 0; color: #9da1a4; font-size: 10px; letter-spacing: .19em; text-transform: uppercase; }
-    @media (prefers-reduced-motion: reduce) { .button { transition: none; } }
+    .powered { margin-top: 23px; padding-top: 17px; border-top: 1px solid rgba(255,255,255,.1); }
+    .powered-label { margin: 0 0 9px; color: #92969a; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; }
+    .lab-link { display: inline-flex; align-items: center; gap: 9px; color: #f3d9e9; text-decoration: none; font-size: 12px; font-weight: 750; letter-spacing: .07em; transition: opacity .18s ease; }
+    .lab-link:hover, .lab-link:focus-visible { opacity: .78; outline: none; }
+    .lab-logo { width: 28px; height: 28px; filter: drop-shadow(0 0 8px rgba(230,74,166,.22)); }
+    .lab-name { color: var(--lab); }
+    @media (prefers-reduced-motion: reduce) { .button, .lab-link { transition: none; } }
   </style>
 </head>
 <body>
@@ -52,6 +57,17 @@
       </a>
     </nav>
     <p class="footer">Notaro Officine Technology</p>
+    <div class="powered">
+      <p class="powered-label">Powered by</p>
+      <a class="lab-link" href="https://www.instagram.com/carminellolab_2.0/" target="_blank" rel="noopener noreferrer" aria-label="Carminello Lab su Instagram">
+        <svg class="lab-logo" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <path d="M20 2.5 36.5 12v16L20 37.5 3.5 28V12L20 2.5Z" stroke="#e64aa6" stroke-width="2"/>
+          <path d="M26.8 13.3a9.4 9.4 0 1 0 0 13.4M26.5 20H17" stroke="#e64aa6" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="28.5" cy="20" r="2" fill="#e64aa6"/>
+        </svg>
+        <span class="lab-name">carminello lab</span>
+      </a>
+    </div>
   </main>
 </body>
 </html>
